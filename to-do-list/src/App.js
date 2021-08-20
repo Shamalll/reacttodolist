@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Input } from "./components/input"; 
+import { input } from "./components/input";
+import todoitem from "./components/todoitems"; 
 
 function App() {
   const [theItems, setTheItems] = useState([]); 
@@ -13,12 +14,16 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <h1>To do list{theItems}</h1>
-        <button onClick={() => setTheItems((prev) => prev + 1)}>Click</button>
+        <h1>To do list</h1>
       </div>
-      <br></br>
-      
       <input onAdd={itemsAdded} />
+      <div>
+        <ul>
+        {theItems.map((item, index)=> (
+        <todoitem key={index} id={index} text= {item} />
+          ))}
+            </ul>
+      </div>
     </div>
   );
 }

@@ -9,12 +9,10 @@ const Input = (props)=>{
     return(
         <div className="form">
             <input type = "text" onChange={eventHandleChanges} value={inputText} />
-            <button onClick={() =>{
+            <button onClick={() => {
                 props.onAdd(inputText);
                 inputTextSet("");
-            }}>
-                <span>Add</span>
-            </button>
+            }}> <span>Add</span></button>
 
         </div>
     )
