@@ -18,7 +18,7 @@ function App() {
       </div>
       <br></br>
       
-      <input />
+      <input onAdd={itemsAdded} />
     </div>
   );
 }
