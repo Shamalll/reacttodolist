@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Input from "./components/input"; 
+import { Input } from "./components/input"; 
 
 function App() {
+  const [theItems, setTheItems] = useState([]); 
   return (
     <div className="container">
       <div className="header">
